@@ -1,0 +1,29 @@
+{
+  "start": "node server.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "just-tech-news",
+  "description": "",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/es2013/just-tech-news.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/es2013/just-tech-news/issues"
+  },
+  "homepage": "https://github.com/es2013/just-tech-news#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "routes": "^2.1.0",
+    "sequelize": "^6.5.0"
+  }
+}
