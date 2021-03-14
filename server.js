@@ -1,12 +1,21 @@
 const express = require('express');
-const routes = require('./routes');//added api since thats where files live
+const routes = require('./controllers/');
 const sequelize = require('./config/connection');
+//handlebar template engine
+const path = require('path');
+const exphbs = require('express-handlebars');
+const hbs = exphbs.create({});
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+//add ability to use public folder holding css. It allows it to take contents of a folder and server them as static assetes
+app.use(express.static(path.join(__dirname,'public')));
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
 
 // turn on routes
 app.use(routes);
