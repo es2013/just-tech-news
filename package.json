@@ -3,7 +3,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "seeds": "node seeds/index.js"
+    "seeds": "node seeds/index.js",
+    "test":"jest"
+
   },
   "name": "just-tech-news",
   "description": "",
@@ -29,5 +31,8 @@
     "mysql2": "^2.2.5",
     "routes": "^2.1.0",
     "sequelize": "^6.5.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
   }
 }
